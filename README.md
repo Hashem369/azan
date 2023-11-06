@@ -1,2 +1,2 @@
-# azan
-give azan time from a counry and a city given
+# Azan
+Give Azan time in any area of the world !!
