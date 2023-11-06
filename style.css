@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/* variables */
+:root {
+    --nav-bg : cyan;
+    --fg : blueviolet;
+    --m-pad: 20px;
+    --footer-bg : var(--nav-bg);
+}
+/* medias */
+@media (max-width:771px ) {
+    .input {
+        flex-direction: column;
+        align-items: center;
+    }
+    .input button {
+        transform: translateY(250%)!important;
+    }
+    label {
+        font-size: medium !important;
+    }
+    select {
+        font-size: medium !important;
+    }
+    main #result table * {
+        font-size: small !important;
+    }
+}
+/* navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    color: var(--fg);
+}
+nav #logo {
+    width: 50px;
+    height: 50px;
+    
+}
+nav ul {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+/* main */
+/* input div */
+main .input,
+main #result {
+    height: calc(100vh - 50px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fg);
+    gap: 10px;
+}
+main .input :not(img) {
+    padding: 5px 5px;
+    color: var(--fg);
+}
+main .input img,
+main #result img {
+    position: absolute;
+    z-index: -1;
+    height: calc(100vh - 50px);
+    width: 100%;
+    opacity: .7;
+}
+
+main .input button {
+    position: absolute;
+    transform: translateY(200%);
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+main .input select ,
+main .input section option{
+    cursor: pointer;
+    font-size: large;
+    width: 200px;
+}
+
+main .input label {
+    font-weight: bolder;
+    font-size: x-large;
+}
+main .input button:hover {
+    opacity: .8;
+}
+main #result {
+    flex-direction: column;
+}
+main #result table {
+    background-color: rgba(250, 235, 215, 0.369);
+    border-radius: 10%;
+
+}
+main #result p {
+    font-size: large;
+    font-weight: bolder;
+    margin-bottom: 0;
+    text-align: center;
+}
+main #result table * {
+    font-size: 15px;
+    padding: 3px;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.314)  ;
+    border-radius: 20%;
+    font-size: large;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: var(--m-pad);
+    background-color: var(--footer-bg);
+    color: var(--fg);
+}
